@@ -1,0 +1,47 @@
+
+.header{
+    -fx-background-color: linear-gradient(to right,#61D8DE, #e07be8);
+
+}
+.label{
+    -fx-text-fill: #ffffff;
+    -fx-font-size:16px;
+    -fx-font-weight:bold;
+}
+
+.messageLeft{
+    -fx-background-color:#4fabcd;
+    -fx-text-fill: #000000;
+    -fx-padding: 5 5;
+    -fx-background-radius:  0 15 15 15 ;
+    -fx-wrap-text:true;
+
+
+}
+.messageRight{
+    -fx-background-color:#a9e1f5;
+    -fx-text-fill: #000000;
+    -fx-padding: 5 5;
+    -fx-background-radius:  15 0 15 15 ;
+    -fx-wrap-text:true;
+
+
+}
+
+
+.message-container{
+    -fx-padding: 3 3 3 10;
+
+}
+.vbox{
+    -fx-background-color:#f4f4f4;
+}
+.text-field{
+    -fx-background-radius:50;
+}
+.button{
+    -fx-background-color: #7433ff;
+    -fx-text-fill: white;
+
+}
+

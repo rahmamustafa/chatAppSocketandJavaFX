@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../style/chat.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gov.iti.gui.controllers.chatController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="173.20000228881835" minHeight="2.2000213503837642" prefHeight="67.00000305175782" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="485.5999992370605" minHeight="10.0" prefHeight="385.00001220703126" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="118.80000000000001" minHeight="4.7999999999999545" prefHeight="58.20002441406251" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="130.0" prefWidth="600.0" styleClass="header">
+         <children>
+            <ImageView fx:id="backIcon" fitHeight="26.0" fitWidth="18.0" layoutX="12.0" layoutY="6.0" onMouseClicked="#onBack" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/arrow.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_LEFT" layoutX="38.0" prefHeight="60.0" prefWidth="394.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Circle fx:id="userImage" fill="DODGERBLUE" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label id="userName" fx:id="userName" alignment="CENTER" text="Label" textFill="WHITE" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="2.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="382.0" prefWidth="700.0" styleClass="scrollban" GridPane.rowIndex="1">
+         <content>
+            <VBox id="vbMessagesContainer" fx:id="vbMessagesContainer" prefWidth="684.0" styleClass="vbox" />
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="545.0" styleClass="vbox" GridPane.rowIndex="2">
+         <children>
+            <TextField id="tfSendMessage" fx:id="tfSendMessage" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onAction="#sendMessage" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExit" prefHeight="26.0" prefWidth="473.0">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </TextField>
+            <Button id="btnSend" fx:id="btnSend" mnemonicParsing="false" onAction="#sendMessage" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExit" text="Send" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>
